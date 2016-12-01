@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- render the width of the page at the width of its own screen -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--Link to .css on a content delivery network; may download as well --> 
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+<!-- My Own Style Sheet -->
+<style type="text/css">
+	
+
+</style>
+
+</head>
+
+<body>
+<!-- Header -->
+<div class="w3-container w3-red">
+<h1>My Dream Vacation</h1>
+</div>
+
+<!-- Image Slideshow -->
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<!-- Images for slideshow -->
+<img class="mySlides" src="disney-world.jpg" style="width:100%">
+<img class="mySlides" src="disney1.jpg" style="width:100%">
+<img class="mySlides" src="disney2.jpg" style="width:100%">
+
+<!-- Buttons for slideshow -->
+<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">&#10094;</a>
+<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">&#10095;</a>
+</div>
+
+<!-- Body -->
+<!-- Row: Block Quote 1/2 Table 1/2 -->
+<div class="w3-row">
+<!-- Block Quote 1/2 -->
+<div class="w3-half">
+<blockquote class="w3-container w3-leftbar w3-light-grey">
+<p><i>"Make it as simple as possible, but not simpler."</i></p>
+<p>Albert Einstein</p>
+</blockquote>
+</div>
+
+<!-- Table 1/2 -->
+<div class="w3-half">
+<table class="w3-table w3-bordered w3-striped">
+<tr>
+<th>Parks</th>
+<th>Best Ride</th>
+</tr>
+
+<tr>
+<td>Animal Kingdom</td>
+<td>Expedition Everest</td>
+</tr>
+
+<tr>
+  <td>Hollywood Studios</td>
+  <td>Toy Story Mania</td>
+</tr>
+
+<tr>
+  <td>Epcot</td>
+  <td>Test Track</td>
+</tr>
+
+<tr>
+  <td>Magic Kingdom</td>
+  <td>Mine Train</td>
+</tr>
+
+</table>
+</div>
+
+
+</div>
+
+<!-- Footer -->
+<div class="w3-container w3-red">
+<h1>Mrs. Richardson Spring 2016</h1>
+</div>
+
+<!-- JavaScript -->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- This means that the browser will (probably) render the width of the page at the width of its own screen. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Link to .css on a content delivery network; may download as well -->
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<!-- You can create your OWN CSS -->
+<style type="text/css">
+	
+	
+</style>
+</head>
+<body>
+
+<!-- w3-container style ; choose any color you want -->
+<div class="w3-container w3-red">
+  <h1>My Dream....Vacation, Car, Life, Career</h1>
+</div>
+
+<!-- Add this last; doesn't have to go in a div use width 100% -->
+<!-- <img src="disney.jpg" alt="Walt Disney World" style="width:100%"> -->
+<!-- SlideShow -->
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="disney1.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+    My Best Friends
+  </div>
+  <img class="mySlides" src="disney2.jpg" style="width:100%">
+  <img class="mySlides" src="disney3.jpg" style="width:100%">
+<!-- buttons -->
+  <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+  <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+</div>
+
+<!-- Add block quote -->
+<!-- Add Row -->
+<div class="w3-row">
+  <div class="w3-col l4">
+    <blockquote class="w3-container w3-leftbar w3-light-grey width">
+      <p><i>"Quote"</i></p>
+      <p>Author</p>
+</blockquote> 
+  </div>
+  <div class="w3-col l8">
+    <!-- Add with no styling -->
+    <p>The Walt Disney World Resort, known as Walt Disney World or Disney World, is an entertainment complex in Bay Lake, Florida (mailing address is Lake Buena Vista, Florida), near Kissimmee and Orlando, and is the flagship resort of Disney's worldwide corporate enterprise. The resort opened on October 1, 1971, and is the most visited vacation resort in the world, with an attendance of over 52 million annually. (Wikipedia)</p>
+  </div>
+</div>
+
+
+
+<!-- ends row -->
+<table class="w3-table w3-border w3-striped">
+<tr class="w3-red">
+  <th>Parks</th>
+  <th>Best Ride</th>
+</tr>
+<tr>
+  <td>Animal Kingdom</td>
+  <td>Expedition Everest</td>
+</tr>
+<tr>
+  <td>Hollywood Studios</td>
+  <td>Toy Story Mania</td>
+</tr>
+<tr>
+  <td>Epcot</td>
+  <td>Test Track</td>
+</tr>
+<tr>
+  <td>Magic Kingdom</td>
+  <td>Mine Train</td>
+</tr>
+</table>
+
+
+<!-- Add a footer style same color as before -->
+<div class="w3-container w3-red">
+  <h5>Mrs. Richardson 2016</h5>
+</div>
+
+</div>
+
+<!-- JavaScript for slideshow -->
+<!-- <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script> -->
+
+<!-- JavaScript for Automatic slideshow -->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+
+
+</html>
